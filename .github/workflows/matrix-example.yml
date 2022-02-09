@@ -1,0 +1,20 @@
+name: Example of shell usage with matrix
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        shell:
+          - bash
+          - sh
+          - pwsh
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Should optuput "success"
+        run: echo ${{ job.status }}
+        shell: ${{ matrix.shell }}
