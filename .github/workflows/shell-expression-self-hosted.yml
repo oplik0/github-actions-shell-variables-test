@@ -1,4 +1,4 @@
-name: Test expressions in shell parameter
+name: (self-hosted) Test expressions in shell parameter
 
 on:
   push:
