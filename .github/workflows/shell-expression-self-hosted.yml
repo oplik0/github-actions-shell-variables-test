@@ -1,0 +1,13 @@
+name: Test expressions in shell parameter
+
+on:
+  push:
+  workflow_dispatch:
+  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+       - name: should output "success"
+         run: no matter what
+         shell: echo ${{ job.status }}
